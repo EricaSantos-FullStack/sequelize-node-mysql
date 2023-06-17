@@ -1,0 +1,10 @@
+//a criação do arquivo .sequelizerc foi feita para estruturar a aplicação ou fazer uma hierarquia de pastas de uma forma diferente da padrão do sequelize
+
+const path = require("path");
+
+module.exports = {
+  config: path.resolve("./api/config", "config.json"),
+  "models-path": path.resolve("./api/models"),
+  "seeders-path": path.resolve("./api/seeders"),
+  "migrations-path": path.resolve("./api/migrations"),
+};
