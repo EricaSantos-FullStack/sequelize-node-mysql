@@ -26,7 +26,7 @@ Acompanhe o desenvolvimento a baixo:
 ### 📁 Organização das pastas:
 - [x] **config** - configuração de conexão com o banco
 - [x] **controllers** - com o CRUD das informações
-- [x] **migrations** - migrações com os dados das tabelas UP e Down caso necessário. 
+- [x] **migrations** - migrações - o processo de documentar e rastrear mudanças em um banco de dados.. 
 - [x] **models** - modelos com o nome e colunas das tabelas com as associações FK.
 - [x] **routes** - Rotas
 - [x] **seeders** - Povoando as tabelas com dados do seeders
