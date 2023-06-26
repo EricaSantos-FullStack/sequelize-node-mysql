@@ -46,6 +46,7 @@ O MVC possibilita a divisão do projeto em camadas muito bem definidas. Cada uma
 ![Untitled](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/c7149e21-0375-47a7-b16f-3f3ddb5b5ad3)
 
 ### 🎲 Diagrama Relacional do Banco de Dados
+Aqui você consegue ver o diagrama que indica quais tabelas ou relações compõem o banco de dados, bem como os campos incluídos em cada tabela.
 ![diagrama_relacional](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/bdf8e3de-b9b0-4263-a21c-ff06bdf14b33)
 
 No arquivo diagrama de banco - descrição da imagem, você consegue ler a organização certinha de cada dado no banco de dado. <br>
