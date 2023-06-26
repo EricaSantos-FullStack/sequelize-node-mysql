@@ -2,7 +2,7 @@
 
 ![school](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/4fe6043f-ac14-4866-84d2-a5fdae83ad46)
 
-🤔 Estive pensando...  e se a gente ajudasse uma escola de inglês a gerenciar os seus alunos? <br>
+🤔 Estive pensando...  e se a gente ajudasse uma escola de inglês a gerenciar os dados dos seus alunos? <br>
 
 Nesse projeto foi criada uma API que além de conter as informações dos estudantes, turmas, níveis e matriculas, também é possível mostrar todos os dados, incluir mais estudantes, alterar alguma informação e deletar os dados. <br>
 Nessa maravilha que é o mundo do desenvolvimento, utilizei o padrão de arquitetura de software MVC (Model, View e Controller). Não sabe o que é isso? Não se preocupe que logo explicarei.
