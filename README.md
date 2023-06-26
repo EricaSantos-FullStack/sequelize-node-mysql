@@ -1,4 +1,7 @@
 # API com Sequelize, Node.js e MySQL
+
+![school](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/8df08cba-5933-4c52-8757-c439eb09bbac)
+
 🤔 Estive pensando...  e se a gente ajudasse uma escola de inglês a gerenciar os seus alunos? <br>
 
 Nesse projeto foi criada uma API que além de conter as informações dos estudantes, turmas, níveis e matriculas, também é possível mostrar todos os dados, incluir mais estudantes, alterar alguma informação e deletar os dados. <br>
@@ -40,11 +43,13 @@ Ao invés de baixar o MySQL Workbench e fazer toda a sua configuração, pesar a
 ### 🎰 Padrão de arquitetura de software MVC
 O MVC possibilita a divisão do projeto em camadas muito bem definidas. Cada uma delas, o Model, o Controller e a View, executa o que lhe é definido e nada mais do que isso. A utilização do padrão MVC traz como benefício o isolamento das regras de negócios da lógica de apresentação, que é a interface com o usuário. Isto possibilita a existência de várias interfaces com o usuário que podem ser modificadas sem a necessidade de alterar as regras de negócios, proporcionando muito mais flexibilidade e oportunidades de reuso das classes.
 
-[img controler]
+![Untitled](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/764068d6-ddac-4ba7-9123-ddf952b1c2fd)
 
 ### 🎲 Diagrama Relacional do Banco de Dados
-[imagem do diagrama]
-No arquivo diagrama de banco - descrição da imagem, você consegue ler a organização certinha de cada dado no banco de dado. Exemplo:
+![diagrama_relacional](https://github.com/EricaSantos-FullStack/sequelize-node/assets/71906862/1cf0bd53-c664-41da-a8fc-e22c483e6dbd)
+
+No arquivo diagrama de banco - descrição da imagem, você consegue ler a organização certinha de cada dado no banco de dado. <br>
+**Exemplo:**
 ````
 Diagrama de banco de dados composto por quatro tabelas: Pessoas, Níveis, Turmas e Matrículas.
 
