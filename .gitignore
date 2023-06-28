@@ -4,3 +4,4 @@ node_modules
 #pasta aculta
 .DS_Store
 
+.env
