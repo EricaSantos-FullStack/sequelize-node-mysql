@@ -40,6 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     });
     Pessoas.hasMany(models.Matriculas, {
       foreignKey: "estudante_id",
+      scope: { status: "confirmado" }, //-> caso eu queira que retorne todos os estudantes de status true or false confirmado, basta excluir essa linha
+      as: "AulasMatriculadas",
     });
   };
   return Pessoas;
