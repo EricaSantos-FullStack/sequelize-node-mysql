@@ -217,17 +217,21 @@ class PessoaController {
   static async cancelaPessoa(req, res) {
     const { estudanteId } = req.params;
     try {
-      await database.Pessoas.update(
-        { ativo: false },
-        { where: { id: Number(estudanteId) } }
-      );
-      await database.Matriculas.update(
-        { status: "cancelado" },
-        { where: { estudante_id: Number(estudanteId) } }
-      );
-      //updates costumam retornar apenas 0 e 1. Assim sendo peço para o json returnar uma mensagem de confirmação caso a requisição seja confirmada
-      return res.status(200).json({
-        message: `Matrículas ref. estudante ${estudanteId} canceladas`,
+      database.sequelize.transaction(async (transacao) => {
+        await database.Pessoas.update(
+          { ativo: false },
+          { where: { id: Number(estudanteId) } },
+          { transaction: transacao }
+        );
+        await database.Matriculas.update(
+          { status: "cancelado" },
+          { where: { estudante_id: Number(estudanteId) } },
+          { transaction: transacao }
+        );
+        //updates costumam retornar apenas 0 e 1. Assim sendo peço para o json returnar uma mensagem de confirmação caso a requisição seja confirmada
+        return res.status(200).json({
+          message: `Matrículas ref. estudante ${estudanteId} canceladas`,
+        });
       });
     } catch (error) {
       return res.status(500).json(error.message);
