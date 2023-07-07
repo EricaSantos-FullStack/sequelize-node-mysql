@@ -36,14 +36,14 @@ Acompanhe o desenvolvimento a baixo:
 
 ### 🆕 Novas Funcionalidades e camadas de segurança:
 - [x] Paranoid: true // Soft delete =  para fazer o Soft delete dos dados [leia a explicação abaixo]
-- [x] Validação de dados na entrada = Não deixando a responsabilidade de validação apenas na mão do frontend
+- [x] Validação de dados na entrada = Não deixando a responsabilidade da validação apenas na mão do frontend
 - [x] Transactions = garantir a integridade dos dados que envolvem a regra de negócio [leia a explicação abaixo]
 - [x] Scope (escopos) de queries, de associação, etc
 - [x] Filtros para fazer buscar refinadas
 - [x] Camada extra de Serviços
 - [x] Criação de uma nova Controller - Matricula = desvinculando os funções de matriculas com as funções de Pessoas.
-- [x] Conectar serviços entre si
-- [x] Refatorar a aplicação para separar controladores e serviços
+- [x] Conexão dos serviços entre si
+- [x] Refatoração da aplicação para separar controladores e serviços
       
 ### 🦾 Qual é a importância em utilizar uma ORM?
 
