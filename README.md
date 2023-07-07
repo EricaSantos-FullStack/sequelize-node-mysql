@@ -42,7 +42,8 @@ Acompanhe o desenvolvimento a baixo:
 - [x] Filtros para fazer buscar refinadas
 - [x] Camada extra de Serviços
 - [x] Criação de uma nova Controller - Matricula = desvinculando os funções de matriculas com as funções de Pessoas.
-- [x] Refatoração do código antigo
+- [x] Conectar serviços entre si
+- [x] Refatorar a aplicação para separar controladores e serviços
       
 ### 🦾 Qual é a importância em utilizar uma ORM?
 
