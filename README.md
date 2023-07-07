@@ -31,9 +31,18 @@ Acompanhe o desenvolvimento a baixo:
 - [x] **migrations** - migrações - o processo de documentar e rastrear mudanças em um banco de dados. (As alterações feitas no banco via migrações podem ser rastreadas e revertidas para debugar conflitos e erros)
 - [x] **models** - modelos com o nome e colunas das tabelas com as associações FK.
 - [x] **routes** - Rotas
-- [x] **services** - camada extra do MVC/ camada de serviços
+- [x] **services** - camada extra do MVC/ camada de serviços 🆕
 - [x] **seeders** - Povoando as tabelas com dados do seeders
 
+### 🆕 Novas Funcionalidades e camadas de segurança:
+- [x] Paranoid: true // Soft delete =  para fazer o Soft delete dos dados [leia a explicação abaixo]
+- [x] Validação de dados na entrada = Não deixando a responsabilidade de validação apenas na mão do frontend
+- [x] Transactions = garantir a integridade dos dados que envolvem a regra de negócio [leia a explicação abaixo]
+- [x] Scope (escopos) de queries, de associação, etc
+- [x] Filtros para fazer buscar refinadas
+- [x] Camada extra de Serviços
+- [x] Criação de uma nova Controller - Matricula = desvinculando os funções de matriculas com as funções de Pessoas.
+      
 ### 🦾 Qual é a importância em utilizar uma ORM?
 
 Object-Relational Mapping (ORM), em português, mapeamento objeto-relacional, é uma técnica para aproximar o paradigma de desenvolvimento de aplicações orientadas a objetos ao paradigma do banco de dados relacional. O uso da técnica de mapeamento objeto-relacional é realizado através de um mapeador objeto-relacional que geralmente é a biblioteca ou framework que ajuda no mapeamento e uso do banco de dados.
@@ -76,7 +85,7 @@ role: dado do tipo string
 
 Proteja o nome, senha e detalhes delicados da sua aplicação com .ENV. Em poucas palavras, ela vai transformar tudo que for confidencial em variáveis de ambiente que são definidas na raiz do projeto. Por ser confidencial, essa informação é guardada a 7 chaves de dev pra dev.
 
-### 🪄 Camada extra no MVC - Camada de Serviços:
+### 🪄 Camada extra no MVC - Camada de Serviços:🆕
 
 Você sabe porque é importante criar uma nova camada para a nossa aplicação? <br>
 
@@ -86,6 +95,14 @@ Você sabe porque é importante criar uma nova camada para a nossa aplicação? 
 - A camada de serviços passa a ser a única com acesso aos modelos, tirando essa responsabilidade dos controladores. Passamos toda a conexão com os modelos (e com o banco) para a camada de serviços, que vai ser a responsável por chamar os métodos que o Sequelize utiliza para montar as queries.
 - É uma boa prática conectar um controlador somente ao seu próprio serviço.
 - O controlador perdeu a responsabilidade de se conectar aos modelos; agora é encarregado de passar para o serviço correspondente as informações que ele precisa passar para a query (através dos parâmetros), receber o retorno e tratar os resultados.
+
+### 🧮 Transactions (Transações) 🆕
+As transações servem para garantir a integridade dos dados em operações delicadas. Por exemplo, uma operação que acesse mais de uma tabela, acesse várias tabelas, ou que faça atualizações em várias linhas de uma tabela.
+Se acontece qualquer erro nesse processo, qualquer erro de banco, e temos uma falha em qualquer parte dessa operação, nenhum dado é salvo, nenhum dado é atualizado no banco, na realidade, e o banco volta para o ponto onde ele estava antes de tudo isso começar, antes de todas as operações que passamos começarem.
+
+### ❤️‍🩹 Soft delete - Paranoid 🆕
+É quando o dado não é realmente apagado do banco de dados. É interessante que ele inclui na tabela que aquele dado não está mais ativo ou valido.
+É importante usar ele para não perder dados importantes para sempre. No caso da nossa escola, é sempre bom ainda ter os dados dos estudantes que não estudam mais com a gente.
 
 ### ♦️ Como rodar a aplicação?
 
